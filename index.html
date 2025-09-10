@@ -159,14 +159,47 @@
     @keyframes fall {
       to { transform: translateY(110vh) rotate(720deg); }
     }
+
+    /* Gallery styles */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem 0 0 0;
+      margin-top: 2rem;
+    }
+    .gallery figure {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: rgba(255,255,255,0.18);
+      border-radius: 1rem;
+      padding: 1rem 0.5rem 0.5rem 0.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .gallery img, .gallery video {
+      width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .gallery figcaption {
+      margin-top: 0.7rem;
+      font-size: 1rem;
+      text-align: center;
+      color: #ad1457;
+      background: #fff;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      width: 95%;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Happy 2nd Anniversary 🎉</h1>
+    <h1>Happy 2nd Business Anniversary 🎉</h1>
     <h2>BeckySweetChips 🥔✨</h2>
 
-    <p>My Love,</p>
     <p>
       Today, your business turns 2 years old, and my heart is full of pride. I have watched you 
       start with just a dream, and I’ve seen you fight, struggle, and rise above challenges most 
@@ -174,7 +207,7 @@
       with your sweat, your sleepless nights, and your unshakable courage.
     </p>
     <p>
-      Baby, this 2-year journey is not just about your business. It’s a story of who you are — 
+      This journey is not just about your business. It’s a story of who you are — 
       a strong, powerful, and unstoppable woman. I’m blessed to witness your growth, and I 
       promise I’ll always be here, cheering you on, reminding you how amazing you are, and 
       loving you every step of the way.
@@ -198,6 +231,31 @@
       With all my heart,<br>
       Your Loving OLASUNKANMI
     </div>
+
+    <section class="gallery">
+      <figure>
+        <img src="images/photo1.jpg" alt="Becky at work">
+        <figcaption>Focused and determined—this is you every single day, building your dream from the ground up.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/photo2.jpg" alt="Becky managing her business">
+        <figcaption>From early mornings to late nights, your commitment and energy never fade. You are truly inspiring!</figcaption>
+      </figure>
+      <figure>
+        <video controls>
+          <source src="videos/video1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption>Every challenge you face, you conquer with grace and strength. Watching you work is a privilege.</figcaption>
+      </figure>
+      <figure>
+        <video controls>
+          <source src="videos/video2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption>Your journey is proof that hard work and passion lead to greatness. I’m so proud of you!</figcaption>
+      </figure>
+    </section>
 
     <button class="music-control" onclick="toggleMusic()">🎵 Play / Pause Music</button>
     <audio id="bg-music" loop>
@@ -244,79 +302,5 @@
       }
     }
   </script>
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Our Anniversary 💖</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #ffe4ec;
-      margin: 0;
-      padding: 0;
-      color: #5d1049;
-    }
-    header, footer {
-      text-align: center;
-      padding: 1.5rem;
-      background-color: #f8bbd0;
-    }
-    section.letter {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      padding: 2rem;
-    }
-    .gallery img, .gallery video {
-      width: 100%;
-      border-radius: 1rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Happy Anniversary, Mine 💕</h1>
-    <p>One year of love, memories, and magic together</p>
-  </header>
-
-  <section class="letter">
-    <h2>From Papi 💌</h2>
-    <p>My Love,</p>
-    <p>One year ago, you came into my life and made it the most beautiful chapter I’ve ever known. You've been my joy, my calm, and my magic.</p>
-    <p>Thank you for being my light, my partner, my Mine. Here's to many more years.</p>
-    <p><strong>With all of me, Papi 💘</strong></p>
-  </section>
-
-  <section class="gallery">
-    <img src="images/photo1.jpg" alt="Memory 1">
-    <img src="images/photo2.jpg" alt="Memory 2">
-    <video controls>
-      <source src="videos/video1.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <video controls>
-      <source src="videos/video2.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </section>
-
-  <footer>
-    <p>Forever yours 💘</p>
-  </footer>
 </body>
 </html>
