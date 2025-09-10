@@ -1,73 +1,248 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Our Anniversary 💖</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Anniversary BeckySweetChips 🎉</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #ffe4ec;
       margin: 0;
-      padding: 0;
-      color: #5d1049;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(-45deg, #ff7e5f, #feb47b, #ff9a8b, #ff6a88);
+      background-size: 400% 400%;
+      animation: gradientShift 12s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+      animation: fadeIn 2s ease-in;
     }
-    header, footer {
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 60px auto;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 40px;
+      border-radius: 25px;
       text-align: center;
-      padding: 1.5rem;
-      background-color: #f8bbd0;
+      box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(8px);
+      position: relative;
+      z-index: 2;
+      animation: slideUp 1.5s ease-out;
     }
-    section.letter {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
+
+    @keyframes slideUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin-bottom: 0.3em;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 1.5em;
+      margin-bottom: 1.2em;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #fff8dc;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.8;
+      margin-bottom: 1em;
+    }
+
+    .poem {
+      font-style: italic;
+      margin-top: 40px;
+      background: rgba(255, 255, 255, 0.18);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3);
+      animation: glow 3s infinite alternate;
+    }
+
+    .poem h3 {
+      margin-bottom: 15px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6em;
+    }
+
+    @keyframes glow {
+      from { box-shadow: inset 0 0 10px rgba(255,255,255,0.2); }
+      to { box-shadow: inset 0 0 25px rgba(255,255,255,0.5); }
+    }
+
+    .signature {
+      margin-top: 50px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.2em;
+      color: gold;
+      text-shadow: 1px 1px 8px rgba(0,0,0,0.4);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: fixed;
+      width: 22px;
+      height: 22px;
       background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      clip-path: polygon(50% 0%, 61% 10%, 70% 25%, 75% 40%, 74% 55%, 67% 67%, 50% 90%, 33% 67%, 26% 55%, 25% 40%, 30% 25%, 39% 10%);
+      animation: float 6s linear infinite, heartbeat 2s infinite;
+      z-index: 1;
+      opacity: 0.8;
     }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      padding: 2rem;
+
+    @keyframes float {
+      0% { transform: translateY(100vh) scale(0.8); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh) scale(1.3); opacity: 0; }
     }
-    .gallery img, .gallery video {
-      width: 100%;
-      border-radius: 1rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+
+    /* Music button */
+    .music-control {
+      margin-top: 20px;
+      font-size: 1em;
+      background: #fff8dc;
+      color: #333;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .music-control:hover {
+      background: gold;
+      color: #fff;
+    }
+
+    /* Confetti */
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background-color: red;
+      top: -10px;
+      opacity: 0.8;
+      z-index: 3;
+      animation: fall linear forwards;
+    }
+
+    @keyframes fall {
+      to { transform: translateY(110vh) rotate(720deg); }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Happy Anniversary, Mine 💕</h1>
-    <p>One year of love, memories, and magic together</p>
-  </header>
+  <div class="container">
+    <h1>Happy 2nd Anniversary 🎉</h1>
+    <h2>BeckySweetChips 🥔✨</h2>
 
-  <section class="letter">
-    <h2>From Papi 💌</h2>
     <p>My Love,</p>
-    <p>One year ago, you came into my life and made it the most beautiful chapter I’ve ever known. You've been my joy, my calm, and my magic.</p>
-    <p>Thank you for being my light, my partner, my Mine. Here's to many more years.</p>
-    <p><strong>With all of me, Papi 💘</strong></p>
-  </section>
+    <p>
+      Today, your business turns 2 years old, and my heart is full of pride. I have watched you 
+      start with just a dream, and I’ve seen you fight, struggle, and rise above challenges most 
+      people would have given up on. You have built something beautiful with your own hands, 
+      with your sweat, your sleepless nights, and your unshakable courage.
+    </p>
+    <p>
+      Baby, this 2-year journey is not just about your business. It’s a story of who you are — 
+      a strong, powerful, and unstoppable woman. I’m blessed to witness your growth, and I 
+      promise I’ll always be here, cheering you on, reminding you how amazing you are, and 
+      loving you every step of the way.
+    </p>
 
-  <section class="gallery">
-    <img src="images/photo1.jpg" alt="Memory 1">
-    <img src="images/photo2.jpg" alt="Memory 2">
-    <video controls>
-      <source src="videos/video1.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <video controls>
-      <source src="videos/video2.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </section>
+    <div class="poem">
+      <h3>Two Years Strong</h3>
+      <p>
+        Two years ago, you planted a seed,<br>
+        With hope in your heart, and faith you would lead.<br>
+        Through trials and tears, you chose not to fall,<br>
+        You built a dream, and you gave it your all.<br><br>
+        Your journey inspires, your courage shines bright,<br>
+        You turn the darkest struggles into light.<br>
+        My love, my pride, forever you’ll be,<br>
+        A Queen, a fighter, an angel to me.
+      </p>
+    </div>
 
-  <footer>
-    <p>Forever yours 💘</p>
-  </footer>
+    <div class="signature">
+      With all my heart,<br>
+      Your Loving OLASUNKANMI
+    </div>
+
+    <button class="music-control" onclick="toggleMusic()">🎵 Play / Pause Music</button>
+    <audio id="bg-music" loop>
+      <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <script>
+    const colors = ["#ffb6c1", "gold", "#ffffff"]; // pink, gold, white
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = 4 + Math.random() * 4 + "s";
+      heart.style.background = colors[Math.floor(Math.random() * colors.length)];
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 9000);
+    }
+    setInterval(createHeart, 600);
+
+    // Confetti burst once on load
+    function createConfetti() {
+      const confettiColors = ["#ff7e5f", "#feb47b", "#ffcc00", "#ffffff", "#ff6a88"];
+      for (let i = 0; i < 80; i++) {
+        const conf = document.createElement("div");
+        conf.classList.add("confetti");
+        conf.style.left = Math.random() * 100 + "vw";
+        conf.style.backgroundColor = confettiColors[Math.floor(Math.random() * confettiColors.length)];
+        conf.style.animationDuration = 3 + Math.random() * 3 + "s";
+        conf.style.transform = `rotate(${Math.random() * 360}deg)`;
+        document.body.appendChild(conf);
+        setTimeout(() => conf.remove(), 6000);
+      }
+    }
+    window.onload = createConfetti;
+
+    // Music controls
+    const music = document.getElementById("bg-music");
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
+  </script>
 </body>
 </html>
